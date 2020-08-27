@@ -1,8 +1,9 @@
 Singleton Class
-++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 A class with a single instance in a JVM.
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Mandatory Properties :
 
 Private Constructor.
@@ -13,9 +14,12 @@ If Multi Threaded, If its eager initializesd its fine and if lazy initialized, d
 
 To stop Cloning, implement clone method and throw exception saying boss, not allowed.
 
-While DeSerialization, instead of readObject method use readResolve method and return the same singleton object. (Also we need to implement readResolve Method)
+While DeSerialization, instead of readObject method use readResolve method
+and return the same singleton object.
+(Also we need to implement readResolve Method)
 
 Also Enum is Singleton by Default.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Interesting Facts ::
 Some Classes and methods which look like Singleton but they are not.
@@ -25,14 +29,8 @@ Runtime.getRuntime() is Singleton.
 Spring Beans default Singleton.
 Logger is Singleton
 
-
 Avoid OverUsage
 Confused with factory Pattern
-
-
-Some classes are not Singleton but looks like they are.
-
-Calendar.getInstance() as it returns new instance everytime. Its factory pattern.
-
-
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Exercise : Create a calculator service which implements two methods to do basic airthmatic operations.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
